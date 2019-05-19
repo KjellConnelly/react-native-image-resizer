@@ -1,3 +1,9 @@
+### Main Differences between fork and the original:
+1) android/build.gradle has different sdk versions due to my Macbook Air having such a small hard drive and not having many build tools on it. Also dependencies in this file have a compile() function instead of a compileOnly() function.
+
+Everything below is from the original repo:
+-------------------------------------------
+
 # React Native Image Resizer
 
 A React Native module that can create scaled versions of local images (also supports the assets library on iOS).
