@@ -301,6 +301,9 @@ public class ImageResizer {
         File path = context.getCacheDir();
         if (outputPath != null) {
             path = new File(outputPath);
+            if (!path.exists()){
+                path.mkdir();
+            }
         }
 
         File newFile = ImageResizer.saveImage(rotatedImage, path,
