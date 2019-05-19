@@ -10,6 +10,7 @@ import android.media.ExifInterface;
 import android.net.Uri;
 import android.provider.MediaStore;
 import android.util.Base64;
+import android.os.Environment;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -300,7 +301,7 @@ public class ImageResizer {
         // Save the resulting image
         File path = context.getCacheDir();
         if (outputPath != null) {
-            path = new File(outputPath);
+            path = new File(Environment.getExternalStorageDirectory(), outputPath);
             if (!path.exists()){
                 path.mkdir();
             }
