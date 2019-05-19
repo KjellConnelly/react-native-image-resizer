@@ -1,5 +1,6 @@
 ### Main Differences between fork and the original:
 1) android/build.gradle has different sdk versions due to my Macbook Air having such a small hard drive and not having many build tools on it. Also dependencies in this file have a compile() function instead of a compileOnly() function.
+2) Android wasn't working with an outputPath due to the path directory not existing. Now it creates a directory if it doesn't exist. It also saves to externalStorage by default instead of letting you create an absolute path. `${externalStorageDirectory}/${outputPath with a / at the end}${randomDateString}.jpg (or png)`
 
 Everything below is from the original repo:
 -------------------------------------------
